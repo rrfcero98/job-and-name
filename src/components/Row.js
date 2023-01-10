@@ -1,12 +1,13 @@
 import React from "react";
+import '../style/Row.css';
 
-function Row({ name, job }) {
+function Row({ id, name, job, eliminarFila}) {
   return (
     <tr>
       <td>{name}</td>
       <td>{job}</td>
       <td>
-        <button>Delete</button>
+        <button onClick={() => eliminarFila(id)}>Delete</button>
       </td>
     </tr>
   );

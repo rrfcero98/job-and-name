@@ -11,13 +11,20 @@ function Table() {
       fila.nombre = fila.nombre.trim();
       fila.empleo = fila.empleo.trim();
 
-      const filasActualizadas = [fila, ...filas];
+      const filasActualizadas = [...filas, fila];
       setFilas(filasActualizadas);
       console.log(filasActualizadas);
     }else{
       alert('Llene los dos campos');
     }
   };
+
+  const eliminarFila = id => {
+    const filasActualizadas = filas.filter(lista => lista.id !== id);
+    console.log(filasActualizadas);
+    setFilas(filasActualizadas); 
+  };
+
 
   return (
     <>
@@ -34,8 +41,11 @@ function Table() {
           {
             filas.map((fila) =>
             <Row 
+              key={fila.id}
+              id={fila.id}
               name={fila.nombre}
               job={fila.empleo}
+              eliminarFila={eliminarFila}
             />
             )
           }

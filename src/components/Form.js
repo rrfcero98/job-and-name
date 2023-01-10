@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import '../style/Form.css';
+import { v4 as uuidv4 } from 'uuid';
 
 function Formulary(props) {
 
@@ -22,6 +23,7 @@ function Formulary(props) {
     console.log(e);
 
     const filaNueva = {
+      id: uuidv4(),
       nombre: input1,
       empleo: input2
     }
