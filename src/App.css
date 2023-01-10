@@ -1,0 +1,13 @@
+.App {
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    margin: 40px 0;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    background-color: aliceblue;
+    width: 1200px;
+}
