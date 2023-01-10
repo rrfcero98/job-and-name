@@ -1,6 +1,5 @@
 import "./App.css";
 import Table from './components/Table';
-import Form from './components/Form';
 
 function App() {
   return (
@@ -8,11 +7,9 @@ function App() {
       <div className="container">
         <div className="header">
           <h1>Name and Job App</h1>
-          <h3>Add a character with a name and a job to the table</h3>
+          <p>Add a character with a name and a job to the table</p>
         </div>
-        <div className="table">
-          <Table />
-        </div>
+        <Table />
       </div>
     </div>
   );

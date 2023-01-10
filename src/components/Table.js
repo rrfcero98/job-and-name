@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "../style/Table.css";
-import Formulary from "./Form";
+import Formulary from "./Formulary";
 import Row from "./Row";
 
 function Table() {
@@ -51,7 +51,7 @@ function Table() {
           }
         </tbody>
       </table>
-      <h1>Add New</h1>
+      <h2>Add New</h2>
       <Formulary onSubmit={agregarFila} />
     </>
   );
